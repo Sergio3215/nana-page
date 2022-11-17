@@ -1,0 +1,43 @@
+.ImgProfile{
+    border: 1px solid transparent;
+    border-radius: 50%;
+    width: var(--size--img--profile);
+    height: var(--size--img--profile);
+}
+
+.ContentProfile{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ContentTitle, .ContentProfile{
+    min-width: 800px;
+}
+
+.ContentTitle{
+    display: flex;
+    align-items: flex-start;
+    align-content: stretch;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.ContentProfile h2{
+    position: relative;
+    top: 70px;
+    left: 20px;
+}
+.ContentProfile h3{
+    position: relative;
+    top: 120px;
+    right: 20px;
+}
+
+.rules{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
