@@ -29,7 +29,7 @@ export default async function handler(req, res) {
       success = true;
 
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
 
     res.json({ success: success });

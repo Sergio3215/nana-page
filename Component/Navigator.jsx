@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function Navigator(props){
 
-    const [menu, setMenu] = useState([["Rules","Rules"],["Photo","Photo"],["Video","Video"],["Calls/VideoCalls","Calls/VideoCalls"],["Offerts Special","Offerts Special"], ["Rent a Girlfriend","Rent a Girlfriend"],["Extra","Extra"],["Gallery","Gallery"]]);
+    const [menu, setMenu] = useState([["Photo","Photo"],["Video","Video"],["Calls/VideoCalls","Calls/VideoCalls"],["Offerts Special","Offerts Special"], ["Rent a Girlfriend","Rent a Girlfriend"],["Extra","Extra"],["Gallery","Gallery"], ["Payment Method", "PaymentMethod"]]);
 
     return(
         <>

@@ -15,7 +15,7 @@ export default async function handler(req, res) {
         dataSnapshot1.forEach(doc => dataList1.push(doc.data()));
         res.json({data: dataList1})
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.json({ data: [], error: err.message, success:false  });
     }
 }

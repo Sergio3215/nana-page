@@ -17,6 +17,7 @@ export default function Rules() {
 
     return (
         <div className={rules}>
+            <u>Rules</u>
             {
                 data.map(m => {
                     return (

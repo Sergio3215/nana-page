@@ -3,6 +3,7 @@ import Extra from "./Extra";
 import Gallery from "./Gallery";
 import Navigator from "./Navigator";
 import OffertSpecial from "./OffertSpecial";
+import PaymentMethod from "./PaymentMethod";
 import Photo from "./Photo";
 import ProfileContent from "./Profile";
 import RentGirlFriend from "./RentGirlFriend";
@@ -12,14 +13,13 @@ import Video from "./Video";
 
 export default function Container() {
 
-    const [components, setComponents] = useState([
-        [<Rules />, "Rules"], [<Photo />, "Photo"], [<Video />, "Video"], [<TypeCalls />, "Calls/VideoCalls"], [<OffertSpecial />, "Offerts Special"], [<RentGirlFriend />, "Rent a Girlfriend"], [<Extra />, "Extra"], [<Gallery />, "Gallery"]
+    const [components, setComponents] = useState([, [<Photo />, "Photo"], [<Video />, "Video"], [<TypeCalls />, "Calls/VideoCalls"], [<OffertSpecial />, "Offerts Special"], [<RentGirlFriend />, "Rent a Girlfriend"], [<Extra />, "Extra"], [<Gallery />, "Gallery"], [<PaymentMethod />, "PaymentMethod"]
     ]);
 
-    const [stateChild, setStateChild] = useState("Rules");
+    const [stateChild, setStateChild] = useState("Photo");
 
 
-    const setChild = (value)=>{
+    const setChild = (value) => {
         setStateChild(value);
     }
 
@@ -27,19 +27,24 @@ export default function Container() {
         <>
             <ProfileContent />
             <h2>Menu 🖤</h2>
-            <div>
-                <Navigator setChild={setChild}/>
-                {
-                    components.map(m=>{
-                        return(
-                            <>
-                            {
-                                (m[1] == stateChild)? m[0] : null
-                            }
-                            </>
-                        )
-                    })
-                }
+            <div className="NavBody--Content">
+                <div>
+                    <Navigator setChild={setChild} />
+                </div>
+                <div className="body--contain">
+                    {
+                        components.map(m => {
+                            return (
+                                <>
+                                    {
+                                        (m[1] == stateChild) ? m[0] : null
+                                    }
+                                </>
+                            )
+                        })
+                    }
+                    <Rules />
+                </div>
             </div>
         </>
     )
